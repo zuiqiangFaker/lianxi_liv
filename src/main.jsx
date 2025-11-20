@@ -1,12 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
-import './index.css'
-import App from './App.jsx'
-{/* <RouterProvider router={router} /> */}
-createRoot(document.getElementById('root')).render(
+import { Provider } from "react-redux";
+import { store } from "./store";
+import "./index.css";
+import 'antd/dist/reset.css'; // AntD 组件基础样式
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind-compat.css'
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
-)
+);

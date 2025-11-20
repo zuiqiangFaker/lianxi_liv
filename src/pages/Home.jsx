@@ -1,8 +1,3 @@
-const Home = () => {
-    return (
-        <div>
-            我是Home组件
-        </div>
-    )
+export default function Home() {
+  return <div>欢迎进入主页！</div>
 }
-export default Home
