@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 5003965 */
+  src: url('iconfont.woff2?t=1761890064209') format('woff2'),
+       url('iconfont.woff?t=1761890064209') format('woff'),
+       url('iconfont.ttf?t=1761890064209') format('truetype'),
+       url('iconfont.svg?t=1761890064209#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paixu:before {
+  content: "\e600";
+}
+
+.icon-xiangshang:before {
+  content: "\e601";
+}
+
+.icon-caidan_shou:before {
+  content: "\e7d5";
+}
+
+.icon-paixu2_sort-two:before {
+  content: "\e7d4";
+}
+
+.icon-bianji_edit:before {
+  content: "\e7d3";
+}
+
+.icon-gengduo2_more-two:before {
+  content: "\e748";
+}
+
+.icon-shijian_time:before {
+  content: "\e77d";
+}
+
+.icon-fenxiang_sharing:before {
+  content: "\e7ce";
+}
+
+.icon-jieshouku_receive:before {
+  content: "\e7cf";
+}
+
+.icon-zhuanbian_transform:before {
+  content: "\e7d0";
+}
+
+.icon-quanbu_all-application:before {
+  content: "\e7d1";
+}
+
+.icon-youxibiaoqing_game-emoji:before {
+  content: "\e7d2";
+}
+
+.icon-zuanshi:before {
+  content: "\e7cd";
+}
+
+.icon-duizhan:before {
+  content: "\e7cc";
+}
+
+.icon-bangzhu_help:before {
+  content: "\e708";
+}
+
+.icon-caidan:before {
+  content: "\e653";
+}
+
+.icon-fuzhi_copy:before {
+  content: "\e71a";
+}
+
+.icon-zuo_left:before {
+  content: "\e6f2";
+}
+
+.icon-you_right:before {
+  content: "\e6f3";
+}
+
+.icon-shang_up:before {
+  content: "\e6f5";
+}
+
+.icon-xia_down:before {
+  content: "\e6f6";
+}
+
+.icon-MAGMA-01:before {
+  content: "\e7c8";
+}
+
+.icon-BLOOM-01:before {
+  content: "\e7c9";
+}
+
+.icon-FROST-01:before {
+  content: "\e7ca";
+}
+
+.icon-AIR-01:before {
+  content: "\e7cb";
+}
+
+.icon-EARTH-01:before {
+  content: "\e7b9";
+}
+
+.icon-WATER-01:before {
+  content: "\e7ba";
+}
+
+.icon-GRANITE-01:before {
+  content: "\e7bb";
+}
+
+.icon-NATURE-01:before {
+  content: "\e7bc";
+}
+
+.icon-DUST-01:before {
+  content: "\e7bd";
+}
+
+.icon-WILDFIRE-01:before {
+  content: "\e7be";
+}
+
+.icon-TEMPEST-01:before {
+  content: "\e7bf";
+}
+
+.icon-TSUNAMI-01:before {
+  content: "\e7c0";
+}
+
+.icon-STEAM-01:before {
+  content: "\e7c1";
+}
+
+.icon-SPORE-01:before {
+  content: "\e7c2";
+}
+
+.icon-VERDANT-01:before {
+  content: "\e7c3";
+}
+
+.icon-TOXIC-01:before {
+  content: "\e7c4";
+}
+
+.icon-FIRE-01:before {
+  content: "\e7c5";
+}
+
+.icon-INFERNO-01:before {
+  content: "\e7c6";
+}
+
+.icon-MUD-01:before {
+  content: "\e7c7";
+}
+
+.icon-SHOCK-01:before {
+  content: "\e7b8";
+}
+
+.icon-ARCANITE:before {
+  content: "\e7b1";
+}
+
+.icon-FIGHTER:before {
+  content: "\e7b2";
+}
+
+.icon-COLOSSUS:before {
+  content: "\e7b3";
+}
+
+.icon-HARBINGER:before {
+  content: "\e7b4";
+}
+
+.icon-INVOKER:before {
+  content: "\e7b5";
+}
+
+.icon-BEHEMOTH:before {
+  content: "\e7b6";
+}
+
+.icon-BERSERKER:before {
+  content: "\e7b7";
+}
+
+.icon-TEMPLAR:before {
+  content: "\e7a5";
+}
+
+.icon-PSION:before {
+  content: "\e7a6";
+}
+
+.icon-EMPATH:before {
+  content: "\e7a4";
+}
+
+.icon-REVENANT:before {
+  content: "\e7a7";
+}
+
+.icon-PHANTOM:before {
+  content: "\e7a8";
+}
+
+.icon-SLAYER:before {
+  content: "\e7a9";
+}
+
+.icon-PREDATOR:before {
+  content: "\e7aa";
+}
+
+.icon-ROGUE:before {
+  content: "\e7ab";
+}
+
+.icon-VANGUARD:before {
+  content: "\e7ac";
+}
+
+.icon-ENCHANTER:before {
+  content: "\e7ad";
+}
+
+.icon-BULWARK:before {
+  content: "\e7ae";
+}
+
+.icon-MYSTIC:before {
+  content: "\e7af";
+}
+
+.icon-AEGIS:before {
+  content: "\e7b0";
+}
+

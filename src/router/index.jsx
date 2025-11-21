@@ -2,9 +2,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "@/pages/About";
-import Login from "@/pages/Login";
+import Login from "@/pages/login/Login";
 import App from "../App";
 import MainLayout from "@/layout/MainLayout";
+import Rent from "@/pages/rent/index";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Rent />,
       },
     ],
   },

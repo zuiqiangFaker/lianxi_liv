@@ -1,0 +1,27 @@
+.bgImg {
+  background-image: url('../../assets/images/BG_1_v2.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.bgImg2 {
+    background-image: url('../../assets/images/BG_collector.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+}
+.app_bg {
+  width: 100%;
+  height: 100vh;
+  background-image: 
+    url('@/assets/images/BG_1_v2.png'),
+    url('@/assets/images/BG_collector.png'); /* 第二张图 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}

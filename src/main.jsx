@@ -8,6 +8,9 @@ import "./index.css";
 import 'antd/dist/reset.css'; // AntD 组件基础样式
 import 'virtual:uno.css'
 import '@unocss/reset/tailwind-compat.css'
+import "@/assets/icon/iconfont.css";
+import "@/assets/icon/iconfont.js";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>

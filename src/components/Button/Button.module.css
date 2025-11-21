@@ -1,0 +1,83 @@
+.customButton {
+  border-radius: 4px;
+  background: linear-gradient(180deg, #242466 0%, #171737 100%);
+  color: #fff;
+  border: 1px solid #2f2f86;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Button Sizes */
+.small {
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.medium {
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+.large {
+  font-size: 18px;
+  padding: 12px 24px;
+}
+
+.customButton:hover {
+  background: linear-gradient(180deg, #2f2f85 0%, #1e1e48 100%);
+}
+
+.customButton:active {
+  background: linear-gradient(180deg, #191948 0%, #101027 100%);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonContent {
+  white-space: nowrap;
+}
+
+/* Danger Button */
+.dangerButton {
+  background: linear-gradient(180deg, #a02041ff 0%, #771831ff 100%);
+  border: 1px solid #771831ff;
+}
+
+.dangerButton:hover {
+  background: linear-gradient(180deg, #cc2953ff 0%, #a32143ff 100%);
+}
+
+.dangerButton:active {
+  background: linear-gradient(180deg, #7a1932ff 0%, #5c1326ff 100%);
+}
+
+/* Primary Button */
+.primaryButton {
+   border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #6003c7 0%, #163087 100%) padding-box,
+    linear-gradient(180deg, #6500ce 0%, #0a3fb7 100%) border-box;
+  /* background: linear-gradient(180deg, #6003c7 0%, #163087 100%); */
+}
+
+.primaryButton:hover {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #7404ef 0%, #1a39a2 100%) padding-box,
+    linear-gradient(180deg, #6500ce 0%, #0a3fb7 100%) border-box;
+  /* background: linear-gradient(180deg, #7404ef 0%, #1a39a2 100%); */
+}
+
+.primaryButton:active {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #4d029f 0%, #11266c 100%) padding-box,
+    linear-gradient(180deg, #6500ce 0%, #0a3fb7 100%) border-box;
+  /* background: linear-gradient(180deg, #4d029f 0%, #11266c 100%); */
+}

@@ -1,0 +1,13 @@
+.circleGlow {
+  position: absolute;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(55, 45, 145, 1) 0%,
+    rgba(55, 45, 145, 0) 100%
+  );
+}

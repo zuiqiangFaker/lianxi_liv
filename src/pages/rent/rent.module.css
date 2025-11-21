@@ -1,0 +1,21 @@
+.bgImg {
+    background-image: url('../../assets/images/BG_1_v2.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed; /* 全屏背景 */
+  top: 0;
+  left: 0;
+}
+
+.bgImg2 {
+    background-image: url('../../assets/images/BG_collector.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
