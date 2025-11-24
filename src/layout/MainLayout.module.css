@@ -25,3 +25,16 @@
   background-position: center;
   position: relative;
 }
+.antLayoutContent::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.antLayoutContent::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
+}
+
+.antLayoutContent::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 4px;
+}

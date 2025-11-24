@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Dropdown, Space } from "antd";
 
 // 图片（路径按你项目调整）
 import default_avatar from "@/assets/images/default_avatar.png";
@@ -24,6 +25,16 @@ const Header = () => {
   const isCollapsed = mockStore.collapsed;
   const sidebarHovered = mockStore.sidebarHovered;
 
+  const items = [
+    {
+      key: "1",
+      label: "Personal Center",
+    },
+    {
+      key: "2",
+      label: "Log out",
+    },
+  ];
   // 计算菜单图标 class 逻辑
   const menuIconClass = useMemo(() => {
     if (isCollapsed) {
@@ -54,29 +65,44 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-full">
-
+    <div className="flex justify-between  h-full">
       {/* 左侧菜单 */}
-      <div className="flex items-center h-full">
+      <div className="flex items-center ">
         <span
           className={`iconfont !text-[22px] text-[#7F7FBE] cursor-pointer hover:text-[#BABAFF] ${menuIconClass}`}
           onClick={toggleSidebar}
         />
 
-        {isShowBack && (
+        {/* {isShowBack && (
           <>
             <div className="line w-[1px] h-full bg-[#7474AA51] mx-6" />
-            <div className="flex items-center cursor-pointer" onClick={backHandler}>
+            <div
+              className="flex items-center cursor-pointer"
+              onClick={backHandler}
+            >
               <img className="w-[16px] h-[15px]" src={back_icon} alt="" />
               <span className="ml-2 text-[14px] text-[#7F7FBE]">Back</span>
             </div>
           </>
-        )}
+        )} */}
       </div>
 
       {/* 右侧头像 + Popover */}
-      <div className="relative flex items-center">
-        {token && (
+      <div className="flex items-center">
+        <Dropdown menu={{ items }}>
+          <a onClick={(e) => e.preventDefault()}>
+            <Space>
+              <img
+                className="ml-4 w-[40px] h-[40px] rounded-full border border-[#7474aa52] cursor-pointer"
+                src={default_avatar}
+                alt=""
+              />
+            </Space>
+          </a>
+        </Dropdown>
+      </div>
+      {/* <div className="relative flex items-center"> */}
+      {/* {token && (
           <img
             className="ml-4 w-[40px] h-[40px] rounded-full border border-[#7474aa52] cursor-pointer"
             src={default_avatar}
@@ -84,10 +110,9 @@ const Header = () => {
             onMouseEnter={() => setPopoverOpen(true)}
             onMouseLeave={() => setPopoverOpen(false)}
           />
-        )}
+        )} */}
 
-        {/* Popover内容 */}
-        {isPopoverOpen && (
+      {/* {isPopoverOpen && (
           <div
             className="absolute top-[48px] right-0 !w-[136px] !min-w-[136px] !px-2 bg-[#1e1d3b] 
             rounded-md shadow-lg py-2 text-[#fff] text-[12px]"
@@ -106,8 +131,9 @@ const Header = () => {
               <span>Log out</span>
             </div>
           </div>
-        )}
-      </div>
+        )} */}
+
+      {/* </div> */}
     </div>
   );
 };

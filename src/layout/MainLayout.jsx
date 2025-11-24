@@ -17,16 +17,20 @@ export default function MainLayout() {
   //   }, [navigate])
 
   return (
-    <div className={style.app_bg}>
-      <Layout className="h-screen relative" >
+    <div className={style.app_bg} >
+      <Layout className="h-screen relative" style={{
+          background: 'transparent',
+        }}>
         <Sidebar />
 
-        <Layout style="">
-          <Header className="sticky top-0 px-[30px] h-[80px] border-b border-[#7474AA51] bg-[#110F2428]">
+        <Layout style={{
+          background: 'transparent',
+        }}>
+          <Header className="sticky top-0 px-[30px] h-[80px] border-b border-[#7474AA51] bg-[#110F2428] lh-1">
             <Navbar />
           </Header>
 
-          <Content className="overflow-auto">
+          <Content className={`overflow-auto text-white ${style.antLayoutContent}`}>
             <Outlet />
           </Content>
         </Layout>
