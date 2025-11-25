@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Dropdown, Space } from "antd";
+import { Dropdown } from "antd";
 
 // 图片（路径按你项目调整）
 import default_avatar from "@/assets/images/default_avatar.png";
@@ -29,10 +29,12 @@ const Header = () => {
     {
       key: "1",
       label: "Personal Center",
+      icon: <img className="w-[16px] h-[16px]" src={profileIcon} alt="" />,
     },
     {
       key: "2",
       label: "Log out",
+      icon: <img className="w-[16px]" src={logOutIcon} alt="" />,
     },
   ];
   // 计算菜单图标 class 逻辑
@@ -91,13 +93,12 @@ const Header = () => {
       <div className="flex items-center">
         <Dropdown menu={{ items }}>
           <a onClick={(e) => e.preventDefault()}>
-            <Space>
+           
               <img
                 className="ml-4 w-[40px] h-[40px] rounded-full border border-[#7474aa52] cursor-pointer"
                 src={default_avatar}
                 alt=""
               />
-            </Space>
           </a>
         </Dropdown>
       </div>

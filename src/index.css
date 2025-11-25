@@ -1,5 +1,7 @@
 /* 全局样式 */
-html, body, #app {
+html,
+body,
+#app {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -8,7 +10,7 @@ html, body, #app {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #110f32;
-  color: #fff ;
+  color: #fff;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -121,10 +123,10 @@ th.el-table__cell {
 /* 弹窗样式 */
 .el-dialog {
   border-radius: 8px !important;
-  background: #1F1B41 !important;
+  background: #1f1b41 !important;
   /* padding-bottom: 18px !important; */
   padding: 32px 24px !important;
-  border: 1px solid #7474AA51 !important;
+  border: 1px solid #7474aa51 !important;
 }
 /* Chrome / Safari / Edge 隐藏箭头 */
 input::-webkit-outer-spin-button,
@@ -137,103 +139,49 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-/* el-popover */
-.el-popover {
+.ant-dropdown-menu {
   background-color: #1a1636 !important;
   border-color: rgba(255, 255, 255, 0.16) !important;
   border-radius: 8px !important;
 }
-
-/* loading 遮罩层背景色、透明度等 */
-.el-loading-mask {
-  background-color: transparent  !important;
-}
-.el-loading-spinner .path {
-  stroke: #7f7fbe !important;
-}
-/* .el-loading-text {
-  color: #ffffff;
-  font-size: 16px;
-}
-.el-loading-spinner i {
-  font-size: 24px;
-  color: #fff;
-} */
-
-/* pagination 样式修改 */
-
-.el-pagination .btn-prev,
-.el-pagination .btn-next {
-  background-color: transparent !important;
-  .el-icon {
-    font-size: 16px !important;
-    color: #7f7fbe !important;
+.ant-dropdown-menu-item {
+  color: #fff !important;
+  font-size: 14px !important;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
   }
 }
-.el-pagination .el-pager li:not(.active):not(.disabled) {
-  background-color: #312A66 !important;
-  font-weight: normal !important;
-}
-.el-pagination .el-pager li:not(.active):not(.disabled):hover {
-  background-color: #2f2a52 !important;
-  color: #fff !important;
+.ant-select-selector {
+  background-color: #1a1636 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
   border-radius: 4px !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  &:hover {
+    
+  }
 }
-.el-pagination .el-pager li:not(.active):not(.disabled) {
-  background-color: transparent !important;
+.ant-select-arrow {
   color: #7f7fbe !important;
-  border-radius: 4px !important;
 }
-.el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
-  background-color: #312a66 !important;
-  color: #fff !important;
-  border-radius: 4px !important;
-}
-
-/* 下拉框样式修改 */
-.el-select .el-select__wrapper {
-  background-color: #1a1636;
-  box-shadow: 0 0 0 1px #7474AA51;
-  span {
-    color: #fff;
-    font-size: 13px;
-  }
-}
-.el-select .el-select__wrapper.is-hovering:not(.is-focused) {
-  background-color: #14122B;
-  box-shadow: 0 0 0 1px #7474aa51;
-}
-.el-select .el-select__wrapper.is-focused {
-  background-color: #14122B;
-  box-shadow: 0 0 0 1px #7474aa51;
-}
-.el-select .el-select__selected-item {
-  .el-tag--light {
-    background-color: #7bb5db;
-  }
-}
-
-.el-select .el-select__caret {
-  color: #7f7fbe;
-}
-.el-select-dropdown__item.is-hovering {
-  background-color: #2f2a52 !important;
-  color: #fff !important;
-}
-.el-select-dropdown__item.is-selected {
-  background-color: transparent !important;
-  color: #fff !important;
-  font-weight: normal !important;
-}
-
-
- 
-
-/* tooltip 样式修改 */
-.el-popper {
-  background-color: #14122b !important;
-  border-color: #7474AA51 !important;
+.ant-select-dropdown {
+  background-color: #1a1636 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
   border-radius: 8px !important;
-  padding: 16px;
+}
+.ant-select-item {
+  color: #fff !important;
+  font-size: 14px !important;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+}
+.ant-select-item-option-selected {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+.ant-select-show-arrow {
+  color: #7f7fbe !important;
+}
+.ant-select-open .ant-select-selection-item {
+  color: #7f7fbe !important;
 }
