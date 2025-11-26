@@ -6,20 +6,34 @@ import Login from "@/pages/login/Login";
 import App from "../App";
 import MainLayout from "@/layout/MainLayout";
 import Rent from "@/pages/rent/index";
+import PrivateRoute from "./PrivateRoute";
+import AuthRoute from "./AuthRoute";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <AuthRoute>
+        <Login />
+      </AuthRoute>
+    ),
   },
   {
     path: "/",
-    element: <MainLayout />,
+    element: (
+      <PrivateRoute>
+        <MainLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         index: true,
         element: <Rent />,
       },
+      {
+        path: "about",
+        element: <About />,
+      }
     ],
   },
 ]);

@@ -2,11 +2,18 @@ import styles from "./Login.module.css";
 import Button from "@/components/Button/index";
 import Logo from "@/assets/images/login_Logo.png";
 import logoTitle from "@/assets/images/login_title.png";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginAsync } from "@/store/counterSlice.js";
 export default function Login() {
-  //   const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    console.log("登录");
+  const handleLogin = async () => {
+    const res = await dispatch(loginAsync());
+    if (res.meta.requestStatus === "fulfilled") {
+      navigate("/");
+    }
   };
 
   return (

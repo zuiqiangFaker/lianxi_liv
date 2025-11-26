@@ -1,9 +1,10 @@
 // src/utils/request.js
 import axios from "axios";
+import { message } from "antd";
+import { logout } from "@/store/counterSlice";
 // import store from "@/store";
 
 // import goEasy from "@/utils/goeasy";
-
 
 // 设置默认超时时间
 axios.defaults.timeout = 300000;
@@ -11,10 +12,10 @@ axios.defaults.timeout = 300000;
 // 请求拦截器
 axios.interceptors.request.use(
   (config) => {
-    // const token = store.state.token;
-    // if (token) {
-    //   config.headers.Authorization = `Bearer ${token}`;
-    // }
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {
@@ -35,22 +36,11 @@ axios.interceptors.response.use(
     try {
       if (error.response && error.response.status === 401) {
         // 登录过期
-        // ElMessage({
-        //   type: "error",
-        //   message: "Login failed",
-        // });
-        // localStorage.clear();
-        // 取消 GoEasy 订阅
-        // const userAddress = store.state.userInfo.address;
-        // if (userAddress) {
-        //   goEasy.pubsub.unsubscribe({
-        //     channel: userAddress,
-        //     onSuccess: () => console.log("取消订阅成功"),
-        //     onFailed: (error) => console.error("取消订阅失败：", error),
-        //   });
-        // }
-        // store.commit("logout");
-        // router.push("/login");
+        if (status === 401) {
+          message.error("Login expired, please login again.");
+          store.dispatch(logout()); // 清除 Redux 用户信息
+          window.location.href = "/login"; // 强制跳登录
+        }
       } else if (error.message.includes("timeout")) {
         // ElMessage({
         //   type: "error",
