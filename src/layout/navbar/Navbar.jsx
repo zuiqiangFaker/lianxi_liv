@@ -1,6 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Dropdown } from "antd";
+import { logout } from "@/api/api.js";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutType } from "@/store/counterSlice.js";
 
 // 图片（路径按你项目调整）
 import default_avatar from "@/assets/images/default_avatar.png";
@@ -18,6 +21,7 @@ const mockStore = {
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
   const [isPopoverOpen, setPopoverOpen] = useState(false);
 
@@ -30,11 +34,17 @@ const Header = () => {
       key: "1",
       label: "Personal Center",
       icon: <img className="w-[16px] h-[16px]" src={profileIcon} alt="" />,
+      onClick: () => {
+        popoverHandler("profile");
+      },
     },
     {
       key: "2",
       label: "Log out",
       icon: <img className="w-[16px]" src={logOutIcon} alt="" />,
+      onClick: () => {
+        popoverHandler("logout");
+      },
     },
   ];
   // 计算菜单图标 class 逻辑
@@ -52,11 +62,13 @@ const Header = () => {
     console.log("toggleSidebar");
   };
 
-  const popoverHandler = (type) => {
+  const popoverHandler = async (type) => {
     if (type === "profile") {
       navigate("/personalCenter");
     } else if (type === "logout") {
-      console.log("执行 logout");
+      // console.log("执行 logout");
+      await logout();
+      dispatch(logoutType());
       navigate("/login");
     }
     setPopoverOpen(false);
@@ -93,12 +105,11 @@ const Header = () => {
       <div className="flex items-center">
         <Dropdown menu={{ items }}>
           <a onClick={(e) => e.preventDefault()}>
-           
-              <img
-                className="ml-4 w-[40px] h-[40px] rounded-full border border-[#7474aa52] cursor-pointer"
-                src={default_avatar}
-                alt=""
-              />
+            <img
+              className="ml-4 w-[40px] h-[40px] rounded-full border border-[#7474aa52] cursor-pointer"
+              src={default_avatar}
+              alt=""
+            />
           </a>
         </Dropdown>
       </div>

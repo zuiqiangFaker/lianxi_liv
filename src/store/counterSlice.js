@@ -56,9 +56,10 @@ const counterSlice = createSlice({
     userInfo: null,
   },
   reducers: {
-    logout(state) {
+    logoutType(state) {
       state.token = "";
       state.userInfo = null;
+      localStorage.removeItem("token");
     },
   },
   extraReducers: (builder) => {
@@ -70,5 +71,5 @@ const counterSlice = createSlice({
   },
 });
 
-export const { logout } = counterSlice.actions;
+export const { logoutType } = counterSlice.actions;
 export default counterSlice.reducer;

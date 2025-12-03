@@ -11,6 +11,11 @@ import '@unocss/reset/tailwind-compat.css'
 import "@/assets/icon/iconfont.css";
 import "@/assets/icon/iconfont.js";
 
+import { injectStore } from './api/http'; // 导入注入函数
+
+//在 store 创建完成后，注入到 request 模块
+injectStore(store);
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>

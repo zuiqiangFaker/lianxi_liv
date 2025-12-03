@@ -9,6 +9,7 @@ import Login from "@/pages/login/Login";
 import App from "../App";
 import MainLayout from "@/layout/MainLayout";
 import Rent from "@/pages/rent/index";
+import PersonalCenter from "@/pages/personalCenter/index";
 import PrivateRoute from "./PrivateRoute";
 import AuthRoute from "./AuthRoute";
 
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "sharing",
         element: <Share />,
+      },
+      {
+        path: "personalCenter",
+        element: <PersonalCenter />,
       },
     ],
   },

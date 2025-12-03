@@ -1,10 +1,16 @@
 // src/utils/request.js
 import axios from "axios";
 import { message } from "antd";
-import { logout } from "@/store/counterSlice";
-// import store from "@/store";
+import { logoutType } from "@/store/counterSlice";
 
 // import goEasy from "@/utils/goeasy";
+// 定义一个变量来存储 store 实例，默认为 null
+let appStore = null;
+
+// 新增一个函数，用于在应用启动时注入 store 实例
+export const injectStore = (_store) => {
+  appStore = _store;
+};
 
 // 设置默认超时时间
 axios.defaults.timeout = 300000;
@@ -36,11 +42,11 @@ axios.interceptors.response.use(
     try {
       if (error.response && error.response.status === 401) {
         // 登录过期
-        if (status === 401) {
-          message.error("Login expired, please login again.");
-          store.dispatch(logout()); // 清除 Redux 用户信息
-          window.location.href = "/login"; // 强制跳登录
+        message.error("Login expired, please login again.");
+        if (appStore) {
+          appStore.dispatch(logoutType());
         }
+        window.location.href = "/login"; // 强制跳登录
       } else if (error.message.includes("timeout")) {
         // ElMessage({
         //   type: "error",
